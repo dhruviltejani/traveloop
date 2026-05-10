@@ -40,43 +40,38 @@ Built with a clean UI and responsive design, Traveloop focuses on creating a smo
 traveloop/
 │
 ├── public/
-│   └── images/
 │
 ├── src/
 │   │
-│   ├── assets/
-│   │   ├── icons/
-│   │   └── images/
-│   │
 │   ├── components/
+│   │   ├── Layout.jsx
 │   │   ├── Navbar.jsx
 │   │   ├── Sidebar.jsx
 │   │   ├── StatCard.jsx
-│   │   ├── TripCard.jsx
-│   │   ├── SearchBar.jsx
-│   │   └── CountryCard.jsx
+│   │   └── TripCard.jsx
 │   │
-│   ├── pages/
-│   │   ├── Dashboard.jsx
-│   │   ├── MyTrips.jsx
-│   │   ├── ViewTrip.jsx
-│   │   ├── Explore.jsx
-│   │   └── NotFound.jsx
-│   │
-│   ├── layouts/
+│   ├── Layouts/
 │   │   └── MainLayout.jsx
 │   │
-│   ├── routes/
-│   │   └── AppRoutes.jsx
-│   │
-│   ├── data/
-│   │   └── destinations.js
-│   │
-│   ├── utils/
-│   │   └── helpers.js
-│   │
-│   ├── styles/
-│   │   └── global.css
+│   ├── pages/
+│   │   ├── ActivitySearch.jsx
+│   │   ├── AddActivity.jsx
+│   │   ├── AddStop.jsx
+│   │   ├── AdminDashboard.jsx
+│   │   ├── CitySearch.jsx
+│   │   ├── CreateTrip.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── EditStop.jsx
+│   │   ├── EditTrip.jsx
+│   │   ├── Login.jsx
+│   │   ├── MyTrips.jsx
+│   │   ├── PackingChecklist.jsx
+│   │   ├── Profile.jsx
+│   │   ├── PublicTrip.jsx
+│   │   ├── Signup.jsx
+│   │   ├── TripBudget.jsx
+│   │   ├── TripNotes.jsx
+│   │   └── ViewTrip.jsx
 │   │
 │   ├── App.jsx
 │   ├── main.jsx

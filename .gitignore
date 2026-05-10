@@ -1,0 +1,17 @@
+# Node
+node_modules
+dist
+
+# Python
+venv
+__pycache__
+*.pyc
+
+# Environment
+.env
+
+# Vite
+.vite
+
+# OS
+.DS_Store

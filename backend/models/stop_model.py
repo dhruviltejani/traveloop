@@ -26,3 +26,10 @@ class Stop(db.Model):
         db.Integer,
         db.ForeignKey("trips.id")
     )
+
+    activities = db.relationship(
+        "Activity",
+        backref="stop",
+        lazy=True,
+        cascade="all, delete-orphan"
+    )

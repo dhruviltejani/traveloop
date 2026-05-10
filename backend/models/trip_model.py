@@ -34,3 +34,10 @@ class Trip(db.Model):
         db.Integer,
         db.ForeignKey("users.id")
     )
+
+    stops = db.relationship(
+        "Stop",
+        backref="trip",
+        lazy=True,
+        cascade="all, delete-orphan"
+    )

@@ -32,7 +32,8 @@ function Signup() {
       navigate("/");
 
     } catch (error) {
-      alert("Signup Failed");
+      console.error("Signup Error:", error);
+      alert(error.response?.data?.message || "Signup Failed");
     }
   };
 
@@ -52,6 +53,7 @@ function Signup() {
           type="text"
           name="name"
           placeholder="Name"
+          value={formData.name}
           onChange={handleChange}
           className="w-full p-4 mb-4 rounded-xl bg-white/10 text-white"
         />
@@ -60,6 +62,7 @@ function Signup() {
           type="email"
           name="email"
           placeholder="Email"
+          value={formData.email}
           onChange={handleChange}
           className="w-full p-4 mb-4 rounded-xl bg-white/10 text-white"
         />
@@ -68,6 +71,7 @@ function Signup() {
           type="password"
           name="password"
           placeholder="Password"
+          value={formData.password}
           onChange={handleChange}
           className="w-full p-4 mb-4 rounded-xl bg-white/10 text-white"
         />

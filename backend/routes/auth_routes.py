@@ -20,9 +20,15 @@ def register():
         bcrypt.gensalt()
     )
 
+    email = data.get("email", "").strip().lower()
+    
+    existing_user = User.query.filter_by(email=email).first()
+    if existing_user:
+        return jsonify({"message": "Email already exists"}), 400
+
     user = User(
-        name=data["name"],
-        email=data["email"],
+        name=data.get("name", "User"),
+        email=email,
         password=hashed_password.decode("utf-8")
     )
 
@@ -40,8 +46,10 @@ def login():
 
     data = request.json
 
+    email = data.get("email", "").strip().lower()
+
     user = User.query.filter_by(
-        email=data["email"]
+        email=email
     ).first()
 
     if not user:
@@ -49,10 +57,13 @@ def login():
             "message": "Invalid email"
         }), 401
 
-    valid = bcrypt.checkpw(
-        data["password"].encode("utf-8"),
-        user.password.encode("utf-8")
-    )
+    try:
+        valid = bcrypt.checkpw(
+            data.get("password", "").encode("utf-8"),
+            user.password.encode("utf-8")
+        )
+    except ValueError:
+        valid = False
 
     if not valid:
         return jsonify({

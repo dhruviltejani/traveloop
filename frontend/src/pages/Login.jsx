@@ -44,7 +44,8 @@ function Login() {
       navigate("/dashboard");
 
     } catch (error) {
-      alert("Invalid Credentials");
+      console.error("Login Error:", error);
+      alert(error.response?.data?.message || "Network Error or Invalid Credentials");
     }
   };
 
@@ -64,6 +65,7 @@ function Login() {
           type="email"
           name="email"
           placeholder="Email"
+          value={formData.email}
           onChange={handleChange}
           className="w-full p-4 mb-4 rounded-xl bg-white/10 text-white"
         />
@@ -72,6 +74,7 @@ function Login() {
           type="password"
           name="password"
           placeholder="Password"
+          value={formData.password}
           onChange={handleChange}
           className="w-full p-4 mb-4 rounded-xl bg-white/10 text-white"
         />

@@ -37,22 +37,56 @@ Built with a clean UI and responsive design, Traveloop focuses on creating a smo
 ## 📂 Project Structure
 
 ```bash
-Traveloop/
+traveloop/
 │
 ├── public/
+│   └── images/
+│
 ├── src/
+│   │
+│   ├── assets/
+│   │   ├── icons/
+│   │   └── images/
+│   │
 │   ├── components/
 │   │   ├── Navbar.jsx
 │   │   ├── Sidebar.jsx
 │   │   ├── StatCard.jsx
+│   │   ├── TripCard.jsx
+│   │   ├── SearchBar.jsx
+│   │   └── CountryCard.jsx
 │   │
 │   ├── pages/
 │   │   ├── Dashboard.jsx
 │   │   ├── MyTrips.jsx
 │   │   ├── ViewTrip.jsx
+│   │   ├── Explore.jsx
+│   │   └── NotFound.jsx
+│   │
+│   ├── layouts/
+│   │   └── MainLayout.jsx
+│   │
+│   ├── routes/
+│   │   └── AppRoutes.jsx
+│   │
+│   ├── data/
+│   │   └── destinations.js
+│   │
+│   ├── utils/
+│   │   └── helpers.js
+│   │
+│   ├── styles/
+│   │   └── global.css
 │   │
 │   ├── App.jsx
 │   ├── main.jsx
+│   └── index.css
 │
+├── .gitignore
 ├── package.json
+├── package-lock.json
+├── vite.config.js
+├── tailwind.config.js
+├── postcss.config.js
 └── README.md
+```
